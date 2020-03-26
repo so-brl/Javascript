@@ -1,67 +1,77 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-    </head>
-    <body>
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
 
-        <h1>Exercice 0</h1>
+<h1>Exercice 0</h1>
 
-        <script type="text/javascript">
+<script type="text/javascript">
 
-        /* Section 1 */   
+    /* Section 1 */
 
-        let name = "Joe";
-        let city = 'London';
-        let age = 32;
-        let isRed = true;
-        let isOld = age > 80;
+    let name = "Joe"; // Déclaration d'une variable, dont la portée est limité, nommée name qui prend pour valeur une string Joe .
+    let city = 'London'; // Déclaration d'une variable, dont la portée est limité, nommée city qui prend pour valeur une string London .
+    let age = 32; // Déclaration d'une variable, dont la portée est limité, nommée age qui prend pour valeur un entier 32.
+    let isRed = true; // Déclaration d'une variable, dont la portée est limité, nommée isRed qui prend pour valeur un boobleen true.
+    let isOld = age > 80; // Déclaration d'une variable, dont la portée est limité, nommée isOld qui prend pour valeur la précedente variable nommé age est qui doit être inférieur un entier 80.
 
-        let previousJobs = ['lawyer', 'developper', 'Professionnal climber'];
+    let previousJobs = ['lawyer', 'developper', 'Professionnal climber'];// Déclaration d'une variable, dont la portée est limité, nommée previousJobs qui est un tableau de 3 valeur de type string 'lawyer', 'developper', 'Professionnal climber'.
 
-        function info(height, weight) {
-            if (height > 180) {
-                console.log('Vous êtes grand');
-            }
-            if (weight < 0) {
-                console.log('oups, there is a problem');
-            } else if ( weight < 15) {
-                console.log('Are you that slim ?')
-            } else {
-                console.log('Good !')
-            }
+    function info(height, weight) { // déclaration d'une fonction appelé info qui prend en paramètre 2 variables
+        if (height > 180) { // condition, si la variable height est inférieur à 180
+            console.log('Vous êtes grand'); // Affichage dans la console de 'Vous êtes grand'
         }
-
-        info(165, 45);
-
-        let myHeight = 175;
-        let myWeight = 86;
-
-        info(myHeight, myWeight);
-
-        info(myHeight + 15, myWeight - 100);
-
-        function toUpper(variable) {
-            return variable.toUpperCase();
+        if (weight < 0) { // condition, si la variable weight est inférieur à 0
+            console.log('oups, there is a problem'); // Affichage dans la console de 'oups, there is a problem'
+        } else if (weight < 15) { // condition, si la variable weight est inférieur à 15
+            console.log('Are you that slim ?') // Affichage dans la console de 'Are you that slim ?'
+        } else { // condition pour le reste
+            console.log('Good !') // Affichage dans la console de 'Good !'
         }
+    }
 
-        let upperName = toUpper(name);
+    info(165, 45); // Appel de la fonction info qui prend en paramètre 165 pour height et 45 pour weight
 
-        for (i = 0; i < 3; i = i + 1) {
-            console.log(previousJobs[i]);
-        }
+    let myHeight = 175;  // Déclaration d'une variable, dont la portée est limité, nommée myHeight qui prend pour valeur un entier 175.
+    let myWeight = 86;  // Déclaration d'une variable, dont la portée est limité, nommée myWeight qui prend pour valeur un entier 86.
 
-        /* Section 2: */
+    info(myHeight, myWeight); // Appel de la fonction info qui prend en paramètre la variable myHeight  et la variable myWeight
 
-        // afficher la ville dans laquele Joe vit.     
+    info(myHeight + 15, myWeight - 100); // Appel de la fonction info qui prend en paramètre la variable myHeight + 15  et la variable myWeight -100
 
-        // afficher si Joe est roux ou pas.
+    function toUpper(variable) { // déclaration d'une fonction appelé toUpper qui prend en paramètre  appellé variable
+        return variable.toUpperCase(); // retour de la fonction toUpper , qui passe la variable en majuscule grace à la fonction JS toUpperCase
+    }
 
-        /* Section 3 */
+    let upperName = toUpper(name); // Déclaration d'une variable, dont la portée est limitée, nommée upperName qui est le resultat de la fonction toUpper dont le paramètre est l a variable name
 
-        // console.log(myVariable);
+    for (i = 0; i < 3; i = i + 1) { // condition, déclaration d'une boucle for
+        console.log(previousJobs[i]); // Affichage dans la console de toute les valeurs du tableau previousJobs précédament déclaré
+    }
 
-        </script>
+    /* Section 2: */
 
-    </body>
+    // afficher la ville dans laquele Joe vit.
+
+    function seecity(variable) {
+        console.log('Joe vit dans las ville de '+ variable);
+    }
+
+    seecity(city)
+    // afficher si Joe est roux ou pas.
+    function seehaire(variable) {
+        console.log('Joe est il roux : '+ variable);
+    }
+
+    seehaire(isRed)
+
+    /* Section 3 */
+
+     console.log(myVariable); // error car la variable n 'est pas défini
+
+</script>
+
+</body>
 </html>
