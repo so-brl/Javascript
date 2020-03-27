@@ -2,48 +2,39 @@
 console.log('exo-2');
 
 
-let isInscrit; // variable de type boolean pour si inscrit
-let age; // du type entier pour l' age du coureur
-const raceNumber = Math.floor(Math.random() * 1000);
+let runner1 = {
+    inscrit : false,
+    age : 12,
+    numero : undefined
+};
+let runner2 = {
+    inscrit: true,
+    age:19,
+    numero:10
+};
 
-//console.log('Le coureur est il inscrit : ' + isInscrit); //Affiche si inscrit
-//console.log('Le coureur a : ' + age + 'ans'); //Affiche l'age du coureur
-//console.log('Le numéro du joueur sera : ' + raceNumber); //Affiche si le numéro de dossard
-
-
-let runner1 = ['joe',1];
-let runner2 = ['lili',2];
-let newrunner = ['what',3];
-let allRunner = [ [runner1],[runner2] ];
-
-
-function addInscrit( variable ) {
-    for (var i = 0; i < allRunner.length; i++) {
-        if (variable[i] == allRunner[i][0]) {
-            console.log('Déja inscrit');
-        }
-    }
-}
+let runner3 = {
+    inscrit: true,
+    age:77,
+    numero:20
+};
 
 
-addInscrit(newrunner)
-
-
-function run(isInscrit, age) {
-    if (isInscrit == true && age < 18) {
-        console.log('You will race at 9:30 am');
-    } else if (isInscrit == true || age > 18) {
-        console.log('You will race at 11:00 am, votre numéro de dossard sera : ' + raceNumber);
-    } else if (isInscrit == false || age < 18) {
-        console.log('You will race at 12:30 pm, votre numéro de dossard sera : ' + raceNumber);
+function run(runner) {
+    if (runner.inscrit === true && runner.age <= 18) {
+        console.log(`You will race at 9:30 am et votre dossard est le n° ${runner.numero}`);
+    } else if (runner.inscrit === true || runner.age > 18) {
+        console.log(`You will race at 11:00 am et votre dossard est le n° ${runner.numero}`);
+    } else if (runner.inscrit === false || runner.age < 18) {
+        console.log(`You will race at 12:30 pm et votre dossard est le n° ${(Math.floor(Math.random()*1000)+1000)}`);
     } else {
-        console.log('Go see the registration desk');
+        console.log(`Go see the registration desk`);
     }
 }
 
-run(true, 17)
-run(true, 22)
-run(false, 17)
-run(false, 22)
+run(runner2)
+run(runner1)
+run(runner3)
+
 
 
