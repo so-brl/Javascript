@@ -11,13 +11,13 @@
 
     /* Section 1 */
 
-    let name = "Joe"; // Déclaration d'une variable, dont la portée est limité, nommée name qui prend pour valeur une string Joe .
-    let city = 'London'; // Déclaration d'une variable, dont la portée est limité, nommée city qui prend pour valeur une string London .
+    let name = "Joe"; // Déclaration d'une variable, dont la portée est limité, nommée name qui prend pour valeur la chaine de charactère Joe .
+    let city = 'London'; // Déclaration d'une variable, dont la portée est limité, nommée city qui prend pour valeur la chaine de charactère London .
     let age = 32; // Déclaration d'une variable, dont la portée est limité, nommée age qui prend pour valeur un entier 32.
     let isRed = true; // Déclaration d'une variable, dont la portée est limité, nommée isRed qui prend pour valeur un boobleen true.
     let isOld = age > 80; // Déclaration d'une variable, dont la portée est limité, nommée isOld qui prend pour valeur la précedente variable nommé age est qui doit être inférieur un entier 80.
 
-    let previousJobs = ['lawyer', 'developper', 'Professionnal climber'];// Déclaration d'une variable, dont la portée est limité, nommée previousJobs qui est un tableau de 3 valeur de type string 'lawyer', 'developper', 'Professionnal climber'.
+    let previousJobs = ['lawyer', 'developper', 'Professionnal climber'];// Déclaration d'une variable, dont la portée est limité, nommée previousJobs qui est un tableau de 3 valeurs de chaine de charactère 'lawyer', 'developper', 'Professionnal climber'.
 
     function info(height, weight) { // déclaration d'une fonction appelé info qui prend en paramètre 2 variables
         if (height > 180) { // condition, si la variable height est inférieur à 180
@@ -56,13 +56,13 @@
     // afficher la ville dans laquele Joe vit.
 
     function seecity(variable) {
-        console.log('Joe vit dans las ville de '+ variable);
+        console.log(`Joe vit dans las ville de ${variable}`);
     }
 
     seecity(city)
     // afficher si Joe est roux ou pas.
     function seehaire(variable) {
-        console.log('Joe est il roux : '+ variable);
+        console.log(`Joe est il roux : ${variable}`);
     }
 
     seehaire(isRed)

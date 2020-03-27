@@ -1,4 +1,4 @@
-# Exo-0 - Lecture de code Javascript.
+********# Exo-0 - Lecture de code Javascript.
 
 Avant d'écrire du code javascript, il est important de savoir en lire, c'est le but de cette partie.
 
