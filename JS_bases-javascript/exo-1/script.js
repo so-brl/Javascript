@@ -8,6 +8,6 @@ console.log(kelvin);
 const celsius = kelvin - 273; // variable qui convertie les Kelvins en Celsius
 console.log(celsius);
 
-const fahrenheit =  Math.floor(celsius * (9/5) + 32 );// vairable qui convertie les  Celsius en fahrenheit
+const fahrenheit =  Math.floor(celsius * (9/5) + 32 ); // vairable qui convertie les  Celsius en fahrenheit
 console.log(fahrenheit);
 
