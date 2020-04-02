@@ -18,5 +18,3 @@ function displayItems(){
 		console.log(element);
 	});
 }
-
-console.log(displayItems);
