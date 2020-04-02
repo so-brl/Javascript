@@ -1,4 +1,42 @@
 console.log(`${cities.length} communes chargées`);
+
+//Exercice 1.1
+//---------------------------------------------
+/*Affichez dans la console
+*le nom et la population des communes de plus de 300 000 habitants,
+*  sous la forme: "nom (population)".
+ */
+let maxPop1 = (value) => {
+    for (city of cities) {
+        if (city.population > value){
+            console.log(`la ville de ${city.nom} a une population de ${city.population} habitants`);
+        }
+    }
+};
+maxPop1(300000);
+
+console.log ('--------------------------------');
+//Exercice 1.2
+//---------------------------------------------
+/*Affichez les dans l'ordre décroissant.
+* Affichez les dans l'ordre décroissant.
+*/
+let maxPop2 = (value) => {
+    let biggerTown = [];
+    for (city of cities) {
+        if (city.population >value ){
+            //console.log(`la ville de ${city.nom} a une population de ${city.population} habitants`);
+            biggerTown.push(city);
+        }
+    }
+    return biggerTown.sort(function (a, b){
+        return b.population - a.population;
+    });
+};
+console.log(maxPop2(300000));
+
+
+console.log(`${cities.length} communes chargées`);
 //Exercice 2.1
 //---------------------------------------------
 /*Trouvez des informations sur les fonctions
