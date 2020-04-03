@@ -1,5 +1,24 @@
 # Manipulation de données/tableaux en JS
 
+
+
+> **Objectif pédagogique:**
+> Les deux exercices suivants ont pour but de se rappeler comment on parcourt un tableau et de préparer les exercices suivants, qui vont introduire une autre logique pour faire la même chose.
+
+
+## Exercice 1.1
+
+Affichez dans la console le nom et la population des communes de plus de 300 000 habitants, sous la forme: "nom (population)".
+
+
+## Exercice 1.2
+
+Affichez les dans l'ordre décroissant.
+
+Voir [Array.sort sur MDN](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/sort)
+
+
+
 >**Objectif pédagogique:**
 > Les exercices suivants ont pour but d'apprendre à utiliser les méthodes natives des tableaux en JS.
 
@@ -36,13 +55,6 @@ Maintenant nous allons extraire la partie qui formate les données pour l'affich
 
 
 
-## Ensuite...
-
-Faire valider par le formateur.
-
-Copiez-coller les méthodes `getCommungetCitiesByDeptesByDept` et `displayCity`, vous en aurez besoin pour les exercices suivants.
-
-# Manipulation de données/tableaux en JS
 
 >**Objectif pédagogique:**
 > Les exercices suivants ont pour but d'apprendre à utiliser les méthodes natives des tableaux en JS.
@@ -84,9 +96,3 @@ console.log(found);
 
 Pour ne pas oublier l'algo 😉, écrire une fonction qui retourne le nombre d'habitants d'un département.
 
-
-## Ensuite
-
-Faire valider par le formateur.
-
-Pour continuer, basculez sur la branche `exo-4`
