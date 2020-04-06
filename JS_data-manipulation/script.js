@@ -188,13 +188,14 @@ console.log('----------------Exercice 4.2----------------');
 //Affichez dans la page HTML la liste des villes du 74 sous forme de div
 
 // function main() {
-//   const el = document.createElement('div');
-//   el.innerHTML =  cities74 ;
-// // insère le div dans le DOM (cela l'affiche)
-//   document.body.appendChild(el);
+//     for (let i=0 ; i<cities74.length; i++){
+//         const el = document.createElement('div');
+//         el.innerHTML =  cities74[i] ;
+//         document.body.appendChild(el);
+//     }
 // }
 
-//ready(main);
+// ready(main);
 
 console.log('----------------Exercice 4.3----------------');
 //Modifiez l'exercice précédent pour afficher un select et ses options
@@ -208,35 +209,32 @@ console.log('----------------Exercice 4.3----------------');
 //             select.appendChild(option);
 //         }
 //     );
-//     // for (let i = 0; i < cities74.length; i++) {
-//     //     const option = document.createElement('option');
-//     //     option.innerHTML = cities74[i];
-//     //     select.appendChild(option);
-//     //}
 //     document.body.appendChild(select);
 // }
 //
 // ready(main);
 
 console.log('----------------Exercice 4.4----------------');
+
 /* 1- Modifiez votre code, pour faire une fonction qui va
  * générer un select à partir d'une liste d'objets de la forme {label, value}.
  */
 
 function main() {
-  const select = document.createElement('select');
-  cities74.forEach(city => {
-        const option = document.createElement('option');
-        option.innerHTML = city;
-        select.appendChild(option);
-      }
-  );
-  // for (let i = 0; i < cities74.length; i++) {
-  //     const option = document.createElement('option');
-  //     option.innerHTML = cities74[i];
-  //     select.appendChild(option);
-  //}
-  document.body.appendChild(select);
+
+    function newSelect(data) {
+
+        const select = document.createElement('select');
+        for (let i = 0; i < data.length; i++) {
+            let option = document.createElement('option');
+            option.innerText = data[i].label;
+            option.value = data[i].value;
+            select.appendChild(option);
+        }
+        return select;
+    }
+    document.body.appendChild(newSelect(getCitiesByDept("74").map(city => ({label : city.nom, value : city.code}))))
 }
 
 ready(main);
+
